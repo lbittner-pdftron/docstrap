@@ -454,20 +454,20 @@ function buildNav(members) {
 
   }
 
-  if (members.globals.length) {
-    members.globals.forEach(function(g) {
-      if (g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname)) {
+  // if (members.globals.length) {
+  //   members.globals.forEach(function(g) {
+  //     if (g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname)) {
 
-        nav.global.members.push(linkto(g.longname, g.longname.replace("module:", "")));
-      }
-      seen[g.longname] = true;
-    });
+  //       nav.global.members.push(linkto(g.longname, g.longname.replace("module:", "")));
+  //     }
+  //     seen[g.longname] = true;
+  //   });
 
-    // even if there are no links, provide a link to the global page.
-    if (nav.global.members.length === 0) {
-      nav.global.members.push(linkto("global", "Global"));
-    }
-  }
+  //   // even if there are no links, provide a link to the global page.
+  //   if (nav.global.members.length === 0) {
+  //     nav.global.members.push(linkto("global", "Global"));
+  //   }
+  // }
 
   var topLevelNav = [];
   _.each(nav, function(entry, name) {
@@ -501,7 +501,7 @@ exports.publish = function(taffyData, opts, tutorials) {
   // don't call registerLink() on this one! 'index' is also a valid longname
 
   //	var globalUrl = helper.getUniqueFilename( 'global' );
-  helper.registerLink('global', globalUrl);
+  // helper.registerLink('global', globalUrl);
 
   // set up templating
   // set up templating
