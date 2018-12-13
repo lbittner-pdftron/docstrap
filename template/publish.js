@@ -49,6 +49,7 @@ var navOptions = {
   outputSourcePath: conf.outputSourcePath,
   dateFormat: conf.dateFormat,
   analytics: conf.analytics || null,
+  trackerCode: conf.trackerCode || null,
   methodHeadingReturns: conf.methodHeadingReturns === true,
   sort: conf.sort,
   search: searchEnabled
