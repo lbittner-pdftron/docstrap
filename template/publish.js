@@ -38,7 +38,7 @@ var navOptions = {
   navType: conf.navType || "vertical",
   footer: conf.footer || "",
   copyright: conf.copyright || "",
-  theme: conf.theme || "simplex",
+  theme: conf.theme || "pdftron",
   syntaxTheme: conf.syntaxTheme || "default",
   linenums: conf.linenums,
   collapseSymbols: conf.collapseSymbols || false,
