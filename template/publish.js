@@ -98,12 +98,12 @@ var navigationMaster = {
     link: helper.getUniqueFilename("tutorials.list"),
     members: []
   },
-  global: {
-    title: "Global",
-    link: globalUrl,
-    members: []
+  // global: {
+  //   title: "Global",
+  //   link: globalUrl,
+  //   members: []
 
-  },
+  // },
   external: {
     title: "Externals",
     link: helper.getUniqueFilename("externals.list"),
