@@ -364,7 +364,7 @@ function buildNav(members) {
   if (members.modules.length) {
 
     members.modules.forEach(function(m) {
-      if (!hasOwnProp.call(seen, m.longname)) {
+      if (!hasOwnProp.call(seen, m.longname) && nav.module) {
 
         nav.module.members.push(linkto(m.longname, m.longname.replace("module:", "")));
       }
@@ -375,7 +375,7 @@ function buildNav(members) {
   if (members.externals.length) {
 
     members.externals.forEach(function(e) {
-      if (!hasOwnProp.call(seen, e.longname)) {
+      if (!hasOwnProp.call(seen, e.longname) && nav.module) {
 
         nav.external.members.push(linkto(e.longname, e.name.replace(/(^"|"$)/g, '')));
       }
@@ -386,7 +386,7 @@ function buildNav(members) {
   if (members.classes.length) {
 
     members.classes.forEach(function(c) {
-      if (!hasOwnProp.call(seen, c.longname)) {
+      if (!hasOwnProp.call(seen, c.longname) && nav.module) {
 
         nav.class.members.push(linkto(c.longname, c.longname.replace("module:", "")));
       }
@@ -398,7 +398,7 @@ function buildNav(members) {
   if (members.events.length) {
 
     members.events.forEach(function(e) {
-      if (!hasOwnProp.call(seen, e.longname)) {
+      if (!hasOwnProp.call(seen, e.longname) && nav.module) {
 
         nav.event.members.push(linkto(e.longname, e.longname.replace("module:", "")));
       }
@@ -410,7 +410,7 @@ function buildNav(members) {
   if (members.namespaces.length) {
 
     members.namespaces.forEach(function(n) {
-      if (!hasOwnProp.call(seen, n.longname)) {
+      if (!hasOwnProp.call(seen, n.longname) && nav.module) {
 
         nav.namespace.members.push(linkto(n.longname, n.longname.replace("module:", "")));
       }
@@ -419,29 +419,29 @@ function buildNav(members) {
 
   }
 
-  if (members.mixins.length) {
+  // if (members.mixins.length) {
 
-    members.mixins.forEach(function(m) {
-      if (!hasOwnProp.call(seen, m.longname)) {
+  //   members.mixins.forEach(function(m) {
+  //     if (!hasOwnProp.call(seen, m.longname) && nav.module) {
 
-        nav.mixin.members.push(linkto(m.longname, m.longname.replace("module:", "")));
-      }
-      seen[m.longname] = true;
-    });
+  //       nav.mixin.members.push(linkto(m.longname, m.longname.replace("module:", "")));
+  //     }
+  //     seen[m.longname] = true;
+  //   });
 
-  }
+  // }
 
-  if (members.interfaces && members.interfaces.length) {
+  // if (members.interfaces && members.interfaces.length) {
 
-    members.interfaces.forEach(function(m) {
-      if (!hasOwnProp.call(seen, m.longname)) {
+  //   members.interfaces.forEach(function(m) {
+  //     if (!hasOwnProp.call(seen, m.longname) && nav.module) {
 
-        nav.interface.members.push(linkto(m.longname, m.longname.replace("module:", "")));
-      }
-      seen[m.longname] = true;
-    });
+  //       nav.interface.members.push(linkto(m.longname, m.longname.replace("module:", "")));
+  //     }
+  //     seen[m.longname] = true;
+  //   });
 
-  }
+  // }
 
   if (members.tutorials.length) {
 
@@ -452,20 +452,20 @@ function buildNav(members) {
 
   }
 
-  // if (members.globals.length) {
-  //   members.globals.forEach(function(g) {
-  //     if (g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname)) {
+  if (members.globals.length) {
+    members.globals.forEach(function(g) {
+      if (g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname)) {
 
-  //       nav.global.members.push(linkto(g.longname, g.longname.replace("module:", "")));
-  //     }
-  //     seen[g.longname] = true;
-  //   });
+        nav.global.members.push(linkto(g.longname, g.longname.replace("module:", "")));
+      }
+      seen[g.longname] = true;
+    });
 
-  //   // even if there are no links, provide a link to the global page.
-  //   if (nav.global.members.length === 0) {
-  //     nav.global.members.push(linkto("global", "Global"));
-  //   }
-  // }
+    // even if there are no links, provide a link to the global page.
+    if (nav.global.members.length === 0) {
+      nav.global.members.push(linkto("global", "Global"));
+    }
+  }
 
   var topLevelNav = [];
   _.each(nav, function(entry, name) {
