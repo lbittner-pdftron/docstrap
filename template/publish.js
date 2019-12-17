@@ -77,21 +77,21 @@ var navigationMaster = {
     link: helper.getUniqueFilename('classes.list'),
     members: []
   },
-  // mixin: {
-  //   title: "Mixins",
-  //   link: helper.getUniqueFilename("mixins.list"),
-  //   members: []
-  // },
+  mixin: {
+    title: "Mixins",
+    link: helper.getUniqueFilename("mixins.list"),
+    members: []
+  },
   event: {
     title: "Events",
     link: helper.getUniqueFilename("events.list"),
     members: []
   },
-  // interface: {
-  //   title: "Interfaces",
-  //   link: helper.getUniqueFilename("interfaces.list"),
-  //   members: []
-  // },
+  interface: {
+    title: "Interfaces",
+    link: helper.getUniqueFilename("interfaces.list"),
+    members: []
+  },
   tutorial: {
     title: "Tutorials",
     link: helper.getUniqueFilename("tutorials.list"),
@@ -737,19 +737,19 @@ exports.publish = function(taffyData, opts, tutorials) {
     }], navigationMaster.namespace.link);
   }
 
-  if (view.nav.mixin && view.nav.mixin.members.length) {
-    generate('mixin', view.nav.mixin.title, [{
-      kind: 'sectionIndex',
-      contents: view.nav.mixin
-    }], navigationMaster.mixin.link);
-  }
+  // if (view.nav.mixin && view.nav.mixin.members.length) {
+  //   generate('mixin', view.nav.mixin.title, [{
+  //     kind: 'sectionIndex',
+  //     contents: view.nav.mixin
+  //   }], navigationMaster.mixin.link);
+  // }
 
-  if (view.nav.interface && view.nav.interface.members.length) {
-    generate('interface', view.nav.interface.title, [{
-      kind: 'sectionIndex',
-      contents: view.nav.interface
-    }], navigationMaster.interface.link);
-  }
+  // if (view.nav.interface && view.nav.interface.members.length) {
+  //   generate('interface', view.nav.interface.title, [{
+  //     kind: 'sectionIndex',
+  //     contents: view.nav.interface
+  //   }], navigationMaster.interface.link);
+  // }
 
   if (view.nav.external && view.nav.external.members.length) {
     generate('external', view.nav.external.title, [{
