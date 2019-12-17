@@ -78,20 +78,20 @@ var navigationMaster = {
     members: []
   },
   mixin: {
-    title: "Mixins",
-    link: helper.getUniqueFilename("mixins.list"),
-    members: []
-  },
+  //   title: "Mixins",
+  //   link: helper.getUniqueFilename("mixins.list"),
+  //   members: []
+  // },
   event: {
     title: "Events",
     link: helper.getUniqueFilename("events.list"),
     members: []
   },
-  interface: {
-    title: "Interfaces",
-    link: helper.getUniqueFilename("interfaces.list"),
-    members: []
-  },
+  // interface: {
+  //   title: "Interfaces",
+  //   link: helper.getUniqueFilename("interfaces.list"),
+  //   members: []
+  // },
   tutorial: {
     title: "Tutorials",
     link: helper.getUniqueFilename("tutorials.list"),
