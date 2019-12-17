@@ -77,7 +77,7 @@ var navigationMaster = {
     link: helper.getUniqueFilename('classes.list'),
     members: []
   },
-  mixin: {
+  // mixin: {
   //   title: "Mixins",
   //   link: helper.getUniqueFilename("mixins.list"),
   //   members: []
