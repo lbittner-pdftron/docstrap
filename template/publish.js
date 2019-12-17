@@ -28,7 +28,7 @@ var template = require('jsdoc/template'),
   outdir = env.opts.destination,
   searchEnabled = conf.search !== false;
 
-var globalUrl = helper.getUniqueFilename('global');
+var globalUrl = 'global.html';
 var indexUrl = helper.getUniqueFilename('index');
 
 var navOptions = {
