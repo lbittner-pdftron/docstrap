@@ -669,12 +669,12 @@ exports.publish = function(taffyData, opts, tutorials) {
     doclet.ancestors = getAncestorLinks(doclet);
 
     if (doclet.kind === 'member') {
-      addSignatureTypes(doclet);
+      // addSignatureTypes(doclet);
       addAttribs(doclet);
     }
 
     if (doclet.kind === 'constant') {
-      addSignatureTypes(doclet);
+      // addSignatureTypes(doclet);
       addAttribs(doclet);
       doclet.kind = 'member';
     }
