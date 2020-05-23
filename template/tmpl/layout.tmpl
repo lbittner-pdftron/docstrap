@@ -12,6 +12,8 @@
 	<link type="text/css" rel="stylesheet" href="styles/sunlight.<?js= this.navOptions.syntaxTheme ?>.css">
 
 	<link type="text/css" rel="stylesheet" href="styles/site.<?js= this.navOptions.theme ?>.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
 </head>
 
@@ -239,5 +241,15 @@ $( function () {
     </script>
 <?js } ?>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+	docsearch({
+		apiKey: 'f9d712e43c1978feb1df68f5e63a868c',
+		indexName: 'pdftron',
+		inputSelector: '#search-input',
+		algoliaOptions: { 'facetFilters': ["tags:web"] },
+		debug: false // Set debug to true if you want to inspect the dropdown
+		});
+</script>
 </body>
 </html>
