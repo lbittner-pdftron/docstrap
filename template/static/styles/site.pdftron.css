@@ -7021,3 +7021,12 @@ code {
     max-height: none;
   }
 }
+.search-with-icon {
+  position: relative;  
+}
+.search-with-icon i {
+  position: absolute;  
+}
+.search-with-icon.glyphicon-search {
+  color: #fff;
+}
