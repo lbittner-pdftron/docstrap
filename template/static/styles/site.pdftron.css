@@ -3801,7 +3801,7 @@ tbody.collapse.in {
 }
 .input-group {
   position: relative;
-  display: table;
+  display: flex;
   border-collapse: separate;
 }
 .input-group[class*="col-"] {
@@ -3879,7 +3879,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn {
   width: 1%;
   white-space: nowrap;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .input-group-addon {
   padding: 8px 12px;
@@ -3906,7 +3906,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-addon input[type="checkbox"] {
   margin-top: 0;
 }
-.input-group .form-control:first-child,
+/* .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group > .btn,
@@ -3915,7 +3915,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-}
+} */
 .input-group-addon:first-child {
   border-right: 0;
 }
@@ -4373,7 +4373,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     display: inline-block;
   }
   .navbar-form .input-group {
-    display: inline-table;
+    display: flex;
     vertical-align: middle;
   }
   .navbar-form .input-group .input-group-addon,
@@ -7020,4 +7020,10 @@ code {
   .dropdown-menu {
     max-height: none;
   }
+}
+.search-with-icon i {
+  padding: 10px; 
+}
+.search-with-icon.glyphicon-search {
+  color: #fff;
 }
