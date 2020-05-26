@@ -4373,7 +4373,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     display: inline-block;
   }
   .navbar-form .input-group {
-    display: inline-table;
+    display: flex;
     vertical-align: middle;
   }
   .navbar-form .input-group .input-group-addon,
@@ -7020,9 +7020,6 @@ code {
   .dropdown-menu {
     max-height: none;
   }
-}
-.search-with-icon {
-  display: flex; 
 }
 .search-with-icon i {
   padding: 10px; 
