@@ -3906,7 +3906,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-addon input[type="checkbox"] {
   margin-top: 0;
 }
-.input-group .form-control:first-child,
+/* .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group > .btn,
@@ -3915,7 +3915,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-}
+} */
 .input-group-addon:first-child {
   border-right: 0;
 }
@@ -7022,10 +7022,10 @@ code {
   }
 }
 .search-with-icon {
-  position: relative;  
+  display: flex; 
 }
 .search-with-icon i {
-  position: absolute;  
+  padding: 10px; 
 }
 .search-with-icon.glyphicon-search {
   color: #fff;
