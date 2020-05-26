@@ -44,17 +44,17 @@ window.SearcherDisplay = (function($) {
               }
             }
 
-            $('#search-input').on('keyup', function(evt) {
-              if (evt.keyCode != 13) {
-                return;
-              }
-              startSearch();
-              return false;
-            });
-            $('#search-submit').on('click', function() {
-              startSearch();
-              return false;
-            });
+            // $('#search-input').on('keyup', function(evt) {
+            //   if (evt.keyCode != 13) {
+            //     return;
+            //   }
+            //   startSearch();
+            //   return false;
+            // });
+            // $('#search-submit').on('click', function() {
+            //   startSearch();
+            //   return false;
+            // });
     };
 
     /**
