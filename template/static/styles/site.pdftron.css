@@ -3801,7 +3801,7 @@ tbody.collapse.in {
 }
 .input-group {
   position: relative;
-  display: table;
+  display: flex;
   border-collapse: separate;
 }
 .input-group[class*="col-"] {
